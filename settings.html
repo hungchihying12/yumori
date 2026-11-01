@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f4eb">
+  <title>Settings · Yumori</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+<div class="paper-speckles" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">yumori<span>୨୧</span></a>
+
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="index.html#colour">Colour diary</a>
+    <a class="nav-link" href="gallery.html">Gallery</a>
+    <a class="nav-link" href="journal.html">Journal</a>
+    <a class="nav-link" href="about.html">About</a>
+  </nav>
+
+  <a class="profile-pill" href="settings.html">
+    <span class="profile-dot">୨୧</span>
+    <span>Settings</span>
+  </a>
+</header>
+
+<main class="subpage">
+
+  <section class="page-heading">
+    <p class="eyebrow">MAKE YOUR LITTLE SPACE YOURS</p>
+    <h1>Settings</h1>
+    <p>A few simple controls for your Yumori experience.</p>
+  </section>
+
+  <section class="paper-panel settings-panel">
+
+    <h2>Website information</h2>
+
+    <div class="setting-row">
+      <div>
+        <strong>Storage</strong>
+        <p class="muted">
+          Your current entries are stored locally in this browser.
+          They are not synced to an online account.
+        </p>
+      </div>
+      <span class="tag">Local only</span>
+    </div>
+
+    <div class="setting-row">
+      <div>
+        <strong>Privacy reminder</strong>
+        <p class="muted">
+          Do not save passwords, addresses, school details
+          or other sensitive information in your diary.
+        </p>
+      </div>
+      <span class="tag">Be mindful</span>
+    </div>
+
+    <div class="setting-row">
+      <div>
+        <strong>Back to your pages</strong>
+        <p class="muted">
+          Continue collecting colours, clothing and inspiration.
+        </p>
+      </div>
+      <a class="button secondary link-button" href="index.html">
+        Open Yumori
+      </a>
+    </div>
+
+  </section>
+
+  <section class="paper-panel settings-panel">
+
+    <h2>Clear local Yumori data</h2>
+
+    <p class="muted">
+      This removes Yumori information saved by this website in this
+      browser, including wardrobe photos, profile details, checklist
+      items, colour notes and journal entries. This cannot be undone.
+    </p>
+
+    <button class="button danger-button" id="clearYumori">
+      Clear my local data
+    </button>
+
+    <p id="settingsFeedback" class="feedback" aria-live="polite"></p>
+
+  </section>
+
+  <script>
+    document.getElementById('clearYumori').addEventListener('click', () => {
+      if (!confirm('Clear all Yumori data saved in this browser? This cannot be undone.')) {
+        return;
+      }
+
+      ['yumori-prototype-v1', 'yumori-journal-v1'].forEach(key => {
+        localStorage.removeItem(key);
+      });
+
+      document.getElementById('settingsFeedback').textContent =
+        'Local Yumori data has been cleared from this browser.';
+    });
+  </script>
+
+</main>
+
+<footer class="site-footer">
+  <span>yumori ୨୧</span>
+  <p>a little diary for your everyday style</p>
+  <p>
+    <a href="index.html">Home</a> ·
+    <a href="about.html">About</a> ·
+    <a href="gallery.html">Gallery</a> ·
+    <a href="journal.html">Journal</a> ·
+    <a href="settings.html">Settings</a>
+  </p>
+</footer>
+
+</body>
+</html>
