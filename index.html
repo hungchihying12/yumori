@@ -1,0 +1,124 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Yumori ♡ Your Personal Styling Diary</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="navbar">
+        <a href="index.html" class="logo">yumori ♡</a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#features">Explore</a>
+            <a href="#about">About</a>
+        </nav>
+
+        <button class="login-btn" onclick="showMessage()">
+            My Profile ♡
+        </button>
+    </header>
+
+    <main>
+
+        <section class="hero" id="home">
+
+            <div class="hero-text">
+                <p class="eyebrow">A LITTLE WORLD OF YOUR OWN</p>
+
+                <h1>Welcome to<br>
+                    your little diary.</h1>
+
+                <p class="description">
+                    Discover your colours, organise your wardrobe
+                    and find little ways to express yourself.
+                </p>
+
+                <button class="explore-btn"
+                    onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
+                    Explore Yumori →
+                </button>
+
+                <p class="tiny-note">
+                    made with a little bit of magic ♡
+                </p>
+            </div>
+
+            <div class="mascot-area">
+                <div class="mascot-placeholder">
+                    <span>૮ ˶ᵔ ᵕ ᵔ˶ ა</span>
+                    <p>your little companion</p>
+                </div>
+                <div class="speech-bubble">
+                    Hello there! Ready to explore?
+                    <br>I've prepared something for you ♡
+                </div>
+            </div>
+
+        </section>
+
+        <section class="features" id="features">
+
+            <div class="section-heading">
+                <p>YOUR PERSONAL LITTLE CORNER</p>
+                <h2>Where shall we go today?</h2>
+            </div>
+
+            <div class="feature-grid">
+
+                <div class="feature-card">
+                    <span>✿</span>
+                    <h3>Colour Analysis</h3>
+                    <p>Discover colours you love.</p>
+                    <button onclick="showMessage()">Explore →</button>
+                </div>
+
+                <div class="feature-card">
+                    <span>♡</span>
+                    <h3>Body Analysis</h3>
+                    <p>Explore styling and silhouettes.</p>
+                    <button onclick="showMessage()">Explore →</button>
+                </div>
+
+                <div class="feature-card">
+                    <span>୨୧</span>
+                    <h3>Face Analysis</h3>
+                    <p>Find hairstyles and accessories.</p>
+                    <button onclick="showMessage()">Explore →</button>
+                </div>
+
+                <div class="feature-card">
+                    <span>♧</span>
+                    <h3>My Wardrobe</h3>
+                    <p>Keep your favourite pieces together.</p>
+                    <button onclick="showMessage()">Explore →</button>
+                </div>
+
+            </div>
+        </section>
+
+        <section class="about" id="about">
+            <h2>A little note from Yumori</h2>
+            <p>
+                Your style, your story. There are no rules
+                to how you express yourself.
+            </p>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>made with ♡ at yumori</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
