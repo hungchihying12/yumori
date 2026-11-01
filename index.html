@@ -2,123 +2,203 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Yumori ♡ Your Personal Styling Diary</title>
-
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f4eb">
+  <meta name="description" content="Yumori — your little personal styling diary.">
+  <title>Yumori ୨୧ Your little styling diary</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
+  <div class="paper-speckles" aria-hidden="true"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Yumori home">yumori<span>୨୧</span></a>
+    <nav class="desktop-nav" aria-label="Main navigation">
+      <button class="nav-link active" data-page="home">Home</button>
+      <button class="nav-link" data-page="colour">Colour diary</button>
+      <button class="nav-link" data-page="style">Style notes</button>
+      <button class="nav-link" data-page="wardrobe">Wardrobe</button>
+      <button class="nav-link" data-page="outfits">Outfit planner</button>
+    </nav>
+    <button class="profile-pill" data-page="profile"><span class="profile-dot">୨୧</span><span id="navUsername">my diary</span></button>
+    <button class="mobile-menu" id="mobileMenu" aria-label="Open navigation">☰</button>
+  </header>
 
-    <header class="navbar">
-        <a href="index.html" class="logo">yumori ♡</a>
-
-        <nav>
-            <a href="#home">Home</a>
-            <a href="#features">Explore</a>
-            <a href="#about">About</a>
-        </nav>
-
-        <button class="login-btn" onclick="showMessage()">
-            My Profile ♡
-        </button>
-    </header>
-
-    <main>
-
-        <section class="hero" id="home">
-
-            <div class="hero-text">
-                <p class="eyebrow">A LITTLE WORLD OF YOUR OWN</p>
-
-                <h1>Welcome to<br>
-                    your little diary.</h1>
-
-                <p class="description">
-                    Discover your colours, organise your wardrobe
-                    and find little ways to express yourself.
-                </p>
-
-                <button class="explore-btn"
-                    onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">
-                    Explore Yumori →
-                </button>
-
-                <p class="tiny-note">
-                    made with a little bit of magic ♡
-                </p>
+  <main>
+    <section class="page active" id="page-home">
+      <div class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">A LITTLE WORLD OF YOUR OWN ｡ﾟ</p>
+          <h1>Your style,<br><em>your little story.</em></h1>
+          <p class="lead">A cosy corner to collect your favourite clothes, explore colours and plan outfits that feel like you.</p>
+          <div class="button-row">
+            <button class="button primary" data-page="wardrobe">Open my wardrobe <span>→</span></button>
+            <button class="button secondary" data-page="outfits">Plan an outfit</button>
+          </div>
+          <p class="hand-note">made slowly, with a little bit of magic ♡</p>
+        </div>
+        <div class="hero-art">
+          <div class="sun-doodle">✳</div>
+          <div class="mascot-card">
+            <div class="mascot-wrap" id="heroMascot">
+              <svg class="donkey" viewBox="0 0 260 260" role="img" aria-label="A gentle illustrated dusty blue-grey donkey wearing a mint polka-dot neckerchief and carrying a brown envelope bag">
+                <path class="tail" d="M188 177 Q229 175 218 209" fill="none" stroke="#84999b" stroke-width="8" stroke-linecap="round"/>
+                <path d="M215 204 q-13 0 -11 13 q14 4 20 -8" fill="#a87957"/>
+                <path d="M76 88 Q27 23 53 15 Q87 10 99 83" fill="#9aaeb0" stroke="#718b8e" stroke-width="3"/>
+                <path d="M184 88 Q237 21 211 15 Q179 10 163 83" fill="#9aaeb0" stroke="#718b8e" stroke-width="3"/>
+                <path d="M63 24 Q76 24 88 76" fill="none" stroke="#d9b9b1" stroke-width="10" stroke-linecap="round"/>
+                <path d="M202 24 Q189 24 175 76" fill="none" stroke="#d9b9b1" stroke-width="10" stroke-linecap="round"/>
+                <ellipse cx="130" cy="164" rx="73" ry="66" fill="#a9babc" stroke="#718b8e" stroke-width="3"/>
+                <path d="M79 122 Q83 65 130 62 Q180 66 182 123 Q179 164 130 168 Q82 163 79 122" fill="#a9babc" stroke="#718b8e" stroke-width="3"/>
+                <path d="M91 132 Q95 112 112 115" fill="none" stroke="#536d70" stroke-width="5" stroke-linecap="round"/>
+                <path d="M148 115 Q165 112 169 132" fill="none" stroke="#536d70" stroke-width="5" stroke-linecap="round"/>
+                <ellipse cx="130" cy="146" rx="39" ry="26" fill="#e8d8c8"/>
+                <path d="M126 145 q4 5 8 0" stroke="#8a6b61" stroke-width="3" fill="none" stroke-linecap="round"/>
+                <path d="M111 151 Q130 158 149 151" stroke="#b18a7d" stroke-width="2" fill="none" stroke-linecap="round"/>
+                <path d="M90 184 Q130 205 170 184 L164 207 Q130 228 96 207Z" fill="#b9d2bd" stroke="#829c83" stroke-width="2"/>
+                <g fill="#fffdf8"><circle cx="108" cy="197" r="3"/><circle cx="132" cy="205" r="3"/><circle cx="153" cy="194" r="3"/><circle cx="124" cy="191" r="2.5"/></g>
+                <path d="M86 211 Q67 225 75 244 L98 244 L104 214" fill="#a9babc" stroke="#718b8e" stroke-width="3"/>
+                <path d="M154 214 L160 244 L184 244 Q191 225 174 211" fill="#a9babc" stroke="#718b8e" stroke-width="3"/>
+                <path d="M165 178 Q205 180 209 212 L183 224 L157 202" fill="#a87957" stroke="#795b45" stroke-width="3"/>
+                <path d="M165 188 Q184 186 199 204" fill="none" stroke="#d6b89c" stroke-width="2"/>
+                <g fill="#c9ddc9"><circle cx="179" cy="198" r="3"/><circle cx="193" cy="210" r="3"/><circle cx="181" cy="216" r="3"/></g>
+              </svg>
             </div>
+            <div class="mascot-caption"><span class="tiny-star">✧</span> your little companion <span class="tiny-star">✧</span></div>
+          </div>
+          <div class="speech-bubble" id="mascotSpeech">Hello there! I've saved you a little space in my diary. (˶ᵔ ᵕ ᵔ˶)</div>
+          <span class="floating-note note-one">a tiny note</span>
+          <span class="floating-note note-two">take your time ♡</span>
+        </div>
+      </div>
 
-            <div class="mascot-area">
-                <div class="mascot-placeholder">
-                    <span>૮ ˶ᵔ ᵕ ᵔ˶ ა</span>
-                    <p>your little companion</p>
-                </div>
-                <div class="speech-bubble">
-                    Hello there! Ready to explore?
-                    <br>I've prepared something for you ♡
-                </div>
-            </div>
+      <div class="section-intro">
+        <p class="eyebrow">YOUR PERSONAL LITTLE CORNER</p>
+        <h2>Where shall we go today?</h2>
+        <p>Choose a page to begin exploring.</p>
+      </div>
+      <div class="feature-grid">
+        <button class="feature-card sage" data-page="colour"><span class="card-symbol">✿</span><h3>Colour diary</h3><p>Collect shades and colour combinations you enjoy.</p><span class="card-arrow">Explore →</span></button>
+        <button class="feature-card pink" data-page="style"><span class="card-symbol">୨୧</span><h3>Style notes</h3><p>Save your favourite silhouettes, hairstyles and styling ideas.</p><span class="card-arrow">Explore →</span></button>
+        <button class="feature-card butter" data-page="wardrobe"><span class="card-symbol">⌂</span><h3>My wardrobe</h3><p>Keep all your clothing pieces in one lovely place.</p><span class="card-arrow">Open →</span></button>
+        <button class="feature-card lilac" data-page="outfits"><span class="card-symbol">✧</span><h3>Outfit planner</h3><p>Put together looks and remember what to bring.</p><span class="card-arrow">Plan →</span></button>
+      </div>
 
-        </section>
+      <section class="bring-panel">
+        <div><p class="eyebrow">A LITTLE REMINDER</p><h2>To Bring <span>୨୧</span></h2><p class="muted">A checklist for the things you don't want to forget.</p></div>
+        <form id="checkForm" class="inline-form"><input id="checkInput" maxlength="80" placeholder="Add a little reminder..." aria-label="New checklist item"><button class="button primary" type="submit">Add item +</button></form>
+        <ul id="checkList" class="check-list"></ul>
+        <p id="checkEmpty" class="empty-note">Nothing on your list yet. Add a little reminder above. ♡</p>
+      </section>
+    </section>
 
-        <section class="features" id="features">
+    <section class="page" id="page-colour">
+      <div class="page-heading"><p class="eyebrow">A PAGE FULL OF SHADES</p><h1>My colour diary</h1><p>Explore colours you like wearing. This is a creative preference journal, not a scientific skin or undertone assessment.</p></div>
+      <div class="paper-panel">
+        <h2>Which colours catch your eye?</h2>
+        <p class="muted">Choose any shades you enjoy. You can change these whenever you like.</p>
+        <div class="swatch-grid" id="swatchGrid">
+          <button class="swatch" data-colour="Sage" style="--swatch:#a9bda5"><span>Sage</span></button>
+          <button class="swatch" data-colour="Dusty rose" style="--swatch:#d5a6a5"><span>Dusty rose</span></button>
+          <button class="swatch" data-colour="Butter yellow" style="--swatch:#e8d99c"><span>Butter yellow</span></button>
+          <button class="swatch" data-colour="Misty blue" style="--swatch:#a9bdc8"><span>Misty blue</span></button>
+          <button class="swatch" data-colour="Warm cocoa" style="--swatch:#9b7961"><span>Warm cocoa</span></button>
+          <button class="swatch" data-colour="Lavender" style="--swatch:#c4b5d4"><span>Lavender</span></button>
+          <button class="swatch" data-colour="Cream" style="--swatch:#eee5d2"><span>Cream</span></button>
+          <button class="swatch" data-colour="Berry" style="--swatch:#a66f7b"><span>Berry</span></button>
+        </div>
+        <label class="field-label" for="colourNote">A note about your favourite colours</label>
+        <textarea id="colourNote" rows="3" placeholder="e.g. I like muted greens and soft browns..."></textarea>
+        <button class="button primary" id="saveColours">Save my colour notes</button>
+        <p id="colourFeedback" class="feedback" aria-live="polite"></p>
+      </div>
+      <div class="paper-panel"><h2>Your saved palette</h2><div id="savedPalette" class="saved-palette"><p class="empty-note">Your chosen shades will appear here.</p></div></div>
+    </section>
 
-            <div class="section-heading">
-                <p>YOUR PERSONAL LITTLE CORNER</p>
-                <h2>Where shall we go today?</h2>
-            </div>
+    <section class="page" id="page-style">
+      <div class="page-heading"><p class="eyebrow">IDEAS, NOT RULES</p><h1>My style notes</h1><p>Save styling ideas that feel comfortable and expressive to you. No measurements or appearance ratings needed.</p></div>
+      <div class="two-column">
+        <div class="paper-panel">
+          <h2>What do you enjoy?</h2>
+          <label class="field-label" for="aesthetic">Aesthetic or style inspiration</label>
+          <input id="aesthetic" placeholder="e.g. Japanese retro, casual, coquette">
+          <label class="field-label" for="comfort">Comfort preferences</label>
+          <input id="comfort" placeholder="e.g. soft fabrics, roomy layers">
+          <label class="field-label" for="hairIdeas">Hair ideas you want to try</label>
+          <textarea id="hairIdeas" rows="3" placeholder="Write down hairstyles, partings or accessories..."></textarea>
+          <label class="field-label" for="accessoryIdeas">Accessories and details</label>
+          <textarea id="accessoryIdeas" rows="3" placeholder="Earrings, bags, ribbons, glasses..."></textarea>
+          <button class="button primary" id="saveStyle">Save my style notes</button>
+          <p id="styleFeedback" class="feedback" aria-live="polite"></p>
+        </div>
+        <aside class="side-note"><span class="big-doodle">୨୧</span><h2>A gentle reminder</h2><p>Style advice is just a collection of ideas. You get to decide what you enjoy wearing, and you never need to fit a particular shape or trend.</p><span class="hand-note">there is no wrong way to be you ♡</span></aside>
+      </div>
+    </section>
 
-            <div class="feature-grid">
+    <section class="page" id="page-wardrobe">
+      <div class="page-heading"><p class="eyebrow">A PLACE FOR YOUR FAVOURITE PIECES</p><h1>My wardrobe</h1><p>Photograph or upload your clothing and organise everything into little collections.</p></div>
+      <div class="wardrobe-top">
+        <div class="wardrobe-illustration"><div class="wardrobe-door"><span>୨୧</span><small>YUMORI</small></div><div class="wardrobe-door"><span>♡</span><small>MY CLOSET</small></div></div>
+        <div><h2>A little home for your clothes.</h2><p class="muted">Choose a category, then add a photo of a piece you own.</p><button class="button primary" id="openUpload">Add a clothing piece +</button></div>
+      </div>
+      <div class="category-row" id="categoryFilters">
+        <button class="category-chip active" data-category="All">All pieces</button>
+        <button class="category-chip" data-category="Tops">Tops</button>
+        <button class="category-chip" data-category="Bottoms">Bottoms</button>
+        <button class="category-chip" data-category="Dresses">Dresses</button>
+        <button class="category-chip" data-category="Jackets">Jackets</button>
+        <button class="category-chip" data-category="Accessories">Accessories</button>
+      </div>
+      <div id="wardrobeGrid" class="wardrobe-grid"><p class="empty-note">Your wardrobe is waiting for its first little treasure. ୨୧</p></div>
+    </section>
 
-                <div class="feature-card">
-                    <span>✿</span>
-                    <h3>Colour Analysis</h3>
-                    <p>Discover colours you love.</p>
-                    <button onclick="showMessage()">Explore →</button>
-                </div>
+    <section class="page" id="page-outfits">
+      <div class="page-heading"><p class="eyebrow">LET'S PUT SOMETHING TOGETHER</p><h1>Outfit planner</h1><p>Plan an outfit using pieces you've added to your wardrobe.</p></div>
+      <div class="planner-layout">
+        <div class="paper-panel planner-chat">
+          <div class="chat-header"><div class="mini-mascot"><svg viewBox="0 0 100 100" aria-hidden="true"><ellipse cx="50" cy="57" rx="30" ry="29" fill="#a9babc"/><path d="M28 35 Q10 1 22 5 Q39 8 40 37 M60 37 Q63 5 79 5 Q91 8 72 38" fill="#a9babc" stroke="#718b8e" stroke-width="2"/><ellipse cx="50" cy="65" rx="17" ry="11" fill="#eadbcb"/><path d="M40 51q5 -4 9 0 M53 51q5 -4 9 0" stroke="#536d70" stroke-width="3" fill="none" stroke-linecap="round"/></svg></div><div><strong>Your little styling companion</strong><small>Outfit planner · local demo</small></div></div>
+          <div id="chatMessages" class="chat-messages"><div class="message assistant">Hello! Where are you heading today? Tell me a little about your plans. (˶ᵔ ᵕ ᵔ˶)</div></div>
+          <form id="chatForm" class="chat-form"><input id="chatInput" maxlength="300" placeholder="Tell me about your outing..." aria-label="Message the outfit planner"><button class="button primary" type="submit">Send →</button></form>
+          <p class="small-print">This is a local demo planner, not a live AI assistant. It uses your saved wardrobe and the details you enter.</p>
+        </div>
+        <aside class="paper-panel"><h2>Your wardrobe pieces</h2><div id="plannerWardrobe" class="planner-wardrobe"><p class="empty-note">Add clothing to your wardrobe to see it here.</p></div></aside>
+      </div>
+    </section>
 
-                <div class="feature-card">
-                    <span>♡</span>
-                    <h3>Body Analysis</h3>
-                    <p>Explore styling and silhouettes.</p>
-                    <button onclick="showMessage()">Explore →</button>
-                </div>
+    <section class="page" id="page-profile">
+      <div class="page-heading"><p class="eyebrow">YOUR LITTLE CORNER</p><h1>My profile</h1><p>Personalise your diary on this device.</p></div>
+      <div class="profile-layout paper-panel">
+        <div class="avatar-preview" id="avatarPreview">୨୧</div>
+        <div class="profile-fields">
+          <label class="field-label" for="username">Display name</label><input id="username" maxlength="30" placeholder="Your name">
+          <label class="field-label" for="country">Country</label><input id="country" maxlength="60" placeholder="Your country (optional)">
+          <label class="field-label" for="avatarUpload">Profile picture</label><input id="avatarUpload" type="file" accept="image/*">
+          <button class="button primary" id="saveProfile">Save profile</button>
+          <p id="profileFeedback" class="feedback" aria-live="polite"></p>
+          <p class="small-print">Prototype note: this profile is stored only in this browser. It is not a secure account and cannot be shared across devices.</p>
+          <button class="text-button danger" id="resetData">Reset all local Yumori data</button>
+        </div>
+      </div>
+    </section>
+  </main>
 
-                <div class="feature-card">
-                    <span>୨୧</span>
-                    <h3>Face Analysis</h3>
-                    <p>Find hairstyles and accessories.</p>
-                    <button onclick="showMessage()">Explore →</button>
-                </div>
+  <footer class="site-footer"><span>yumori ୨୧</span><p>a little diary for your everyday style</p><p>made with care · take your time ♡</p></footer>
 
-                <div class="feature-card">
-                    <span>♧</span>
-                    <h3>My Wardrobe</h3>
-                    <p>Keep your favourite pieces together.</p>
-                    <button onclick="showMessage()">Explore →</button>
-                </div>
-
-            </div>
-        </section>
-
-        <section class="about" id="about">
-            <h2>A little note from Yumori</h2>
-            <p>
-                Your style, your story. There are no rules
-                to how you express yourself.
-            </p>
-        </section>
-
-    </main>
-
-    <footer>
-        <p>made with ♡ at yumori</p>
-    </footer>
-
-    <script src="script.js"></script>
-
+  <dialog id="uploadDialog" class="modal">
+    <form id="uploadForm" method="dialog">
+      <div class="modal-heading"><div><p class="eyebrow">A NEW LITTLE TREASURE</p><h2>Add to my wardrobe</h2></div><button type="button" class="close-modal" id="closeUpload" aria-label="Close">×</button></div>
+      <label class="field-label" for="clothingName">Clothing name</label><input id="clothingName" maxlength="60" placeholder="e.g. Cream knit cardigan">
+      <label class="field-label" for="clothingCategory">Category</label><select id="clothingCategory"><option>Tops</option><option>Bottoms</option><option>Dresses</option><option>Jackets</option><option>Accessories</option></select>
+      <label class="field-label" for="clothingPhoto">Photo</label><input id="clothingPhoto" type="file" accept="image/*" required>
+      <div id="photoPreview" class="photo-preview">Your photo preview will appear here.</div>
+      <button class="button primary full-width" type="submit">Save to wardrobe ♡</button>
+      <p id="uploadFeedback" class="feedback"></p>
+    </form>
+  </dialog>
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+  <script src="script.js"></script>
 </body>
 </html>
