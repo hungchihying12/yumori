@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#f8f4eb">
+  <title>Personal Journal · Yumori</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="gallery.css">
+</head>
+
+<body>
+<div class="paper-speckles" aria-hidden="true"></div>
+
+<header class="topbar">
+  <a class="brand" href="index.html">yumori<span>୨୧</span></a>
+
+  <nav class="desktop-nav" aria-label="Main navigation">
+    <a class="nav-link" href="index.html">Home</a>
+    <a class="nav-link" href="index.html#colour">Colour diary</a>
+    <a class="nav-link" href="gallery.html">Gallery</a>
+    <a class="nav-link" href="journal.html">Journal</a>
+    <a class="nav-link" href="about.html">About</a>
+  </nav>
+
+  <a class="profile-pill" href="settings.html">
+    <span class="profile-dot">୨୧</span>
+    <span>Settings</span>
+  </a>
+</header>
+
+<main class="subpage">
+
+  <section class="page-heading">
+    <p class="eyebrow">A PAGE FOR YOUR THOUGHTS</p>
+    <h1>My little journal</h1>
+    <p>
+      Write down outfit ideas, shopping reminders, favourite combinations
+      or small moments you want to remember.
+    </p>
+  </section>
+
+  <section class="journal-layout">
+
+    <form class="paper-panel journal-form" id="journalForm">
+
+      <h2>Write a new entry</h2>
+
+      <label class="field-label" for="entryTitle">
+        Entry title
+      </label>
+
+      <input
+        id="entryTitle"
+        maxlength="70"
+        placeholder="e.g. A rainy-day outfit idea"
+        required
+      >
+
+      <label class="field-label" for="entryMood">
+        A little category
+      </label>
+
+      <select id="entryMood">
+        <option>Style idea</option>
+        <option>Daily note</option>
+        <option>Colour inspiration</option>
+        <option>Outfit memory</option>
+        <option>To remember</option>
+      </select>
+
+      <label class="field-label" for="entryText">
+        Your note
+      </label>
+
+      <textarea
+        id="entryText"
+        rows="7"
+        maxlength="1500"
+        placeholder="Write a little something..."
+        required
+      ></textarea>
+
+      <button class="button primary full-width" type="submit">
+        Save journal entry ♡
+      </button>
+
+      <p class="small-print">
+        Entries are saved only in this browser. Avoid adding private information.
+      </p>
+
+      <p id="journalFeedback" class="feedback" aria-live="polite"></p>
+
+    </form>
+
+    <div class="paper-panel">
+
+      <div class="journal-list-heading">
+        <h2>Past entries</h2>
+        <span class="tag" id="entryCount">0 entries</span>
+      </div>
+
+      <div id="journalEntries" class="journal-entries">
+        <p class="empty-note">
+          Your journal is waiting for its first little note. ୨୧
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <script src="journal.js"></script>
+
+</main>
+
+<footer class="site-footer">
+  <span>yumori ୨୧</span>
+  <p>a little diary for your everyday style</p>
+  <p>
+    <a href="index.html">Home</a> ·
+    <a href="about.html">About</a> ·
+    <a href="gallery.html">Gallery</a> ·
+    <a href="journal.html">Journal</a> ·
+    <a href="settings.html">Settings</a>
+  </p>
+</footer>
+
+</body>
+</html>
