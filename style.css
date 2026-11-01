@@ -1,0 +1,286 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&family=Playfair+Display:wght@500;600&display=swap');
+
+:root {
+    --mint: #c9ddc9;
+    --dark-mint: #829c83;
+    --cream: #faf6ed;
+    --brown: #92745d;
+    --dark-brown: #594637;
+    --beige: #eee4d6;
+    --white: #fffdf8;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--cream);
+    color: var(--dark-brown);
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* NAVIGATION */
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 7%;
+    background: var(--white);
+    border-bottom: 1px dashed var(--mint);
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 28px;
+    color: var(--brown);
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    gap: 28px;
+}
+
+nav a {
+    color: var(--dark-brown);
+    text-decoration: none;
+    font-size: 14px;
+}
+
+nav a:hover {
+    color: var(--dark-mint);
+}
+
+button {
+    font-family: inherit;
+    cursor: pointer;
+    border: none;
+    transition: 0.25s ease;
+}
+
+.login-btn {
+    background: var(--mint);
+    padding: 11px 20px;
+    border-radius: 25px;
+    color: var(--dark-brown);
+}
+
+button:hover {
+    transform: translateY(-3px);
+}
+
+/* HOMEPAGE */
+
+.hero {
+    min-height: 550px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 80px 10%;
+    gap: 50px;
+}
+
+.hero-text {
+    max-width: 520px;
+}
+
+.eyebrow {
+    font-size: 11px;
+    letter-spacing: 3px;
+    color: var(--dark-mint);
+    margin-bottom: 20px;
+    font-weight: 700;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(42px, 6vw, 68px);
+    line-height: 1.15;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 15px;
+    line-height: 1.9;
+    max-width: 400px;
+}
+
+.explore-btn {
+    background: var(--dark-mint);
+    color: white;
+    padding: 15px 28px;
+    border-radius: 30px;
+    margin-top: 30px;
+}
+
+.tiny-note {
+    margin-top: 18px;
+    font-size: 12px;
+    color: var(--brown);
+}
+
+/* MASCOT */
+
+.mascot-area {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.mascot-placeholder {
+    width: 240px;
+    height: 240px;
+    border-radius: 50%;
+    background: var(--mint);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.mascot-placeholder span {
+    font-size: 65px;
+}
+
+.mascot-placeholder p {
+    font-size: 12px;
+}
+
+.speech-bubble {
+    background: var(--white);
+    border: 1px dashed var(--dark-mint);
+    border-radius: 20px;
+    padding: 18px 25px;
+    text-align: center;
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+/* FEATURES */
+
+.features {
+    padding: 80px 8%;
+    background: var(--beige);
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading > p {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: var(--brown);
+    margin-bottom: 12px;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+}
+
+.feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.feature-card {
+    background: var(--white);
+    padding: 30px 20px;
+    border: 1px dashed #cbb9a4;
+    border-radius: 20px;
+    text-align: center;
+}
+
+.feature-card span {
+    font-size: 35px;
+}
+
+.feature-card h3 {
+    margin: 15px 0 10px;
+    font-size: 17px;
+}
+
+.feature-card p {
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.feature-card button {
+    background: var(--mint);
+    padding: 10px 18px;
+    border-radius: 20px;
+    margin-top: 20px;
+    color: var(--dark-brown);
+}
+
+/* ABOUT */
+
+.about {
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.about p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+footer {
+    background: var(--white);
+    text-align: center;
+    padding: 25px;
+    font-size: 12px;
+}
+
+/* MOBILE */
+
+@media (max-width: 800px) {
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 60px 7%;
+    }
+
+    .description {
+        margin: auto;
+    }
+
+    .feature-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    nav {
+        display: none;
+    }
+}
+
+@media (max-width: 450px) {
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .navbar {
+        padding: 18px 5%;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after {
+        scroll-behavior: auto !important;
+        transition: none !important;
+    }
+}
